@@ -48,7 +48,7 @@ def parse_irr_spec(irr_spec):
         return specs # don't fail on this (bgp update should be allowed to run)
 
     irr_cfg = open(irr_spec)
-    cfg = yaml.load(irr_cfg)
+    cfg = yaml.full_load(irr_cfg)
 
     for db in cfg['databases']:
         for db_name, db_info in db.items():
