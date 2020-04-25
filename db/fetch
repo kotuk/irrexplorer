@@ -21,7 +21,7 @@ def main():
         sys.exit(1)
 
     yml_cfg = sys.argv[1]
-    cfg = yaml.load(open(yml_cfg))
+    cfg = yaml.full_load(open(yml_cfg))
 
     if not 'databases' in cfg:
         print 'No database in %s' % yml_cfg
